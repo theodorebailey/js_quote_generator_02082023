@@ -1,5 +1,7 @@
+/* Import google fonts into  */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,800;1,600&display=swap');
 
+/* add defaults including a google font style */
 * {
     margin: 0;
     padding: 0;
@@ -26,3 +28,92 @@ body {
     box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.15);
 }
 
+/* quote box header set font fix margin bottom and set position to relative to surrounding elements */
+.quote-box h2{
+    font-size: 36px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+/* pseudo element after style for h2 children of quote-box adding a tecorative underline element  */
+/* set content of pseudo element to empty,
+set width and height of content, round edges with border radius, seet background colours, set a position realtive to bottom and left properties and transform property to position it relative to the h2 element*/
+.quote-box h2::after{
+    content: '';
+    width: 75px;
+    height: 3px;
+    border-radius: 3px;
+    background: rgba(23, 124, 229, 1);
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* blockquote child of the quote-box class set font size and minimum height of element so always visible */
+.quote-box blockquote{
+    font-size: 26px;
+    min-height: 110px;
+    margin-top: 30px;
+}
+
+/* set pseudo elements of the child blockquote of class quote-box and set a quotation mark before and after */
+.quote-box blockquote::before, .quote-box blockquote::after {
+    content: '"';
+}
+
+/* child span quote-box class display in a block with a top margin float right but keep position relative */
+.quote-box span {
+    display: block;
+    margin-top: 10px;
+    float: right;
+    position: relative;
+}
+
+/* psuedo element before span child of quote-box class sent content to blank string with a width and height set a background colour set position and top and left margins to produce a line */
+.quote-box span::before {
+    content: '';
+    width: 20px;
+    height: 2px;
+    background: rgba(23, 124, 229, 1);
+    position: absolute;
+    top: 50%;
+    left: -30px;
+}
+
+
+/* set width of child div and space from top elements using margin and display element behaviour to flex helping alignment of child elements and justify its content to center which will center the child element within the div useful for horriontal alignments */
+.quote-box div{
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* child button set a background colour and text colour rounded edges with border and set width and height, display flex for horizonal alignment with items centered and set a margin all around and hover cursor pointer */
+.quote-box button{
+    background: rgb(23, 124, 235);
+    color: #fff;
+    border-radius: 25px;
+    border: 1px solid rgb(23, 124, 229);
+    width: 150px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    cursor: pointer;
+}
+
+/* img child button contained in quote-box with a width and margin right for space between image and text */
+.quote-box button img{
+    width: 20px;
+    margin-right: 10px;
+}
+
+/* select second button with properties of transparent background and white colour text */
+.quote-box button:nth-child(2){
+    background: transparent;
+    color: black;
+}
