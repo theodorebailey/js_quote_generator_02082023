@@ -1,14 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,800;1,600&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Playfair Display', serif;
 }
 
+/* set background colour of app */
 body {
     background: #bbc6fa;
 }
 
+/* set quote box colour, set width of element, set position to absolute with top and left positioning, set transform properties */
 .quote-box {
     background: #fff;
     width: 700px;
@@ -21,3 +25,4 @@ body {
     text-align: center;
     box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.15);
 }
+
