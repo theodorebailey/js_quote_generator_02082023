@@ -21,6 +21,7 @@ getQuote(api_url);
 
 // function tweet will populate an open twitter window with tweet text of quote populated in innerHTML and author in innerHTML with tweet window size
 function tweet() {
+    // window open twitter + add quote.innterHTML + -- + author.innerHTML, then choose tweet window and width and height
     window.open("https://twitter.com/intent/tweet?text=" + quote.innerHTML + "-- " + author.innerHTML, "Tweet Window", "width-600, height=300")
     
 }
